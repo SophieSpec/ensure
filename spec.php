@@ -8,7 +8,6 @@ require __DIR__ . '/vendor/autoload.php';
 ini_set('display_errors', '1');
 error_reporting(E_ALL);
 ini_set('log_errors', '0');
-ini_set('zend.assertions', '1');
 ini_set('assert.exception', '1');
 
 // Require spec files
