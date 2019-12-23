@@ -1,0 +1,38 @@
+parameters:
+    stop_on_failure: true
+    ignore_unstaged_changes: true
+    tasks:
+        composer:
+            strict: true
+        git_branch_name:
+            whitelist:
+                - "/(feature|fix|hotfix)\\/[a-z0-9-]+/"
+            blacklist:
+                - "master"
+                - "develop"
+        jsonlint:
+            detect_key_conflicts: true
+        phpcpd:
+            directory:
+                - src
+                - spec
+        phpcsfixer2:
+            config: .php_cs
+        # Disabling for now since pdepend does not fully support PHP 7.4
+        # (if in the future we finally don't want phpmd, do not forget to
+        # remove it from the composer dependencies)
+        #phpmd:
+        #    ruleset:
+        #        - codesize
+        #        - cleancode
+        #        - controversial
+        #        - design
+        #        - naming
+        #        - unusedcode
+        #    exclude:
+        #        - RoboFile.php
+        phpmnd: null
+        psalm:
+            threads: 3
+        securitychecker: null
+        yamllint: null
