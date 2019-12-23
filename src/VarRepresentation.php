@@ -41,7 +41,7 @@ final class VarRepresentation implements VarRepresentationInterface
         $output = '';
         $this->dumper->dump(
             $this->cloner->cloneVar($this->var),
-            function (int $line, int $depth) use (&$output, $indent): void {
+            function (string $line, int $depth) use (&$output, $indent): void {
                 if ($depth >= 0) {
                     /** @psalm-suppress MixedOperand */
                     $output .= str_repeat(' ', $depth * 2 + $indent);
