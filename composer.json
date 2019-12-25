@@ -20,8 +20,8 @@
         "email": "dev@dreamysource.fr"
     }],
     "scripts": {
-        "spec": "php spec.php",
-        "publish": "./vendor/bin/robo publish"
+        "publish": "./vendor/bin/robo publish",
+        "spec": "./vendor/bin/robo spec"
     },
     "autoload": {
         "psr-4" : {
