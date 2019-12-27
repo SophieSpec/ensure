@@ -2,3 +2,4 @@ spec/ export-ignore
 grumphp.yml export-ignore
 psalm.xml export-ignore
 RoboFile.php export-ignore
+spec.php export-ignore
