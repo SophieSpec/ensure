@@ -11,7 +11,7 @@ composer require sophie-spec/ensure
 ## Procedural API
 
 ```php
-use function Ensure\ensure;
+use function Sophie\Ensure\ensure;
 
 $add = function ($a, $b) {
     return $a + $b;
@@ -72,12 +72,12 @@ ensure(
 
 ## Object API
 
-The `ensure()` function is only a wrapper around the object API. Here's how to instantiate/user it:
+The `ensure()` function is only a wrapper around the object API. Here's how to instantiate/use it:
 
 ```php
 ensure($add(1, 2), 3);
 // ...is the same as:
-$assertion = new StrictEqualityAssertion($add(1, 2), 3);
+$assertion = new Sophie\Ensure\StrictEqualityAssertion($add(1, 2), 3);
 $assertion->assert();
 ```
 
