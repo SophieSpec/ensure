@@ -7,13 +7,10 @@
     xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
 >
     <projectFiles>
-        <ignoreFiles>
-            <directory name="vendor" />
-            <file name="RoboFile.php" />
-        </ignoreFiles>
+        <directory name="src"/>
     </projectFiles>
 
     <issueHandlers>
-        <LessSpecificReturnType errorLevel="info" />
+        <LessSpecificReturnType errorLevel="info"/>
     </issueHandlers>
 </psalm>

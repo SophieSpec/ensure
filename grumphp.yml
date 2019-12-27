@@ -17,12 +17,10 @@ parameters:
         phpcpd:
             directory:
                 - src
-                - spec
         phpcsfixer2:
-            config: .php_cs
+            config: .php_cs.dist
         # Disabling for now since pdepend does not fully support PHP 7.4
-        # (if in the future we finally don't want phpmd, do not forget to
-        # remove it from the composer dependencies)
+        # https://github.com/phpmd/phpmd/issues/700
         #phpmd:
         #    ruleset:
         #        - codesize
@@ -33,8 +31,16 @@ parameters:
         #        - unusedcode
         #    exclude:
         #        - RoboFile.php
-        phpmnd: null
-        psalm:
-            threads: 3
+        #        - spec
+        phpmnd:
+            exclude:
+                - RoboFile.php
+                - spec
         securitychecker: null
+        # Could have used psalm task instead but it runs by sending the whole
+        # root directory to the executable. It's annoying and I want a clean
+        # an understandable psalm.xml file. So here we are.
+        shell:
+            scripts:
+                - ["-c", "./vendor/bin/psalm --threads=4"]
         yamllint: null
