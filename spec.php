@@ -10,9 +10,6 @@ error_reporting(E_ALL);
 ini_set('log_errors', '0');
 ini_set('assert.exception', '1');
 
-// Define Mockery global helpers
-Mockery::globalHelpers();
-
 // Require spec files
 foreach (new DirectoryIterator(__DIR__ . '/spec') as $fileInfo) {
     if ($fileInfo->isDot()) {
@@ -21,9 +18,6 @@ foreach (new DirectoryIterator(__DIR__ . '/spec') as $fileInfo) {
     /** @psalm-suppress UnresolvableInclude */
     require_once $fileInfo->getPathname();
 }
-
-// Run Mockery expectations
-Mockery::close();
 
 // Still here?
 echo "All good!\n";
