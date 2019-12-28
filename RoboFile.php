@@ -26,8 +26,8 @@ final class RoboFile extends Robo\Tasks
             );
         }
         $this->_exec('git checkout master');
+        $this->_exec('git pull');
         $this->_exec("git tag $new");
-        $this->_exec('git push');
         $this->_exec('git push --tags');
     }
 }
