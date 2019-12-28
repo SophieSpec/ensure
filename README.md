@@ -5,10 +5,12 @@ Ensure is born with the thought that an ideal unit test should be a strict equal
 ## Install
 
 ```sh
-composer require sophie-spec/ensure
+composer require --dev sophie-spec/ensure
 ```
 
-## Procedural API
+Requires PHP >= 7.4.
+
+## Use
 
 ```php
 use function Sophie\Ensure\ensure;
