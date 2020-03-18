@@ -72,17 +72,6 @@ ensure(
 */
 ```
 
-## Object API
-
-The `ensure()` function is only a wrapper around the object API. Here's how to instantiate/use it:
-
-```php
-ensure($add(1, 2), 3);
-// ...is the same as:
-$assertion = new Sophie\Ensure\StrictEqualityAssertion($add(1, 2), 3);
-$assertion->assert();
-```
-
 ## License
 
 [MIT](http://dreamysource.mit-license.org).
