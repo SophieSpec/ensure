@@ -2,11 +2,6 @@
 
 declare(strict_types=1);
 
-/*
-    sig(Sophie\Ensure\FailedAssertionException::class)
-        ->extends(Exception::class);
-*/
-
 $exception = new Sophie\Ensure\FailedAssertionException(
     [
         'strawberry',
