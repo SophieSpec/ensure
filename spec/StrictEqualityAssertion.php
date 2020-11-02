@@ -2,13 +2,6 @@
 
 declare(strict_types=1);
 
-/*
-    sig(Sophie\Ensure\StrictEqualityAssertion::class)
-        ->implements(Sophie\Ensure\AssertionInterface::class);
-    sig(Sophie\Ensure\StrictEqualityAssertion::class, '__construct')
-        ->accepts('mixed', 'mixed');
-*/
-
 $assertion = new Sophie\Ensure\StrictEqualityAssertion(1, 1);
 $assertion->assert();
 

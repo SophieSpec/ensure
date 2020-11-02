@@ -2,12 +2,6 @@
 
 declare(strict_types=1);
 
-/*
-    sig(Sophie\Ensure\ensure::class)
-        ->accepts('mixed', 'mixed')
-        ->returns('void');
- */
-
 Sophie\Ensure\ensure(1, 1);
 
 try {

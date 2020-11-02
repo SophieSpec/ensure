@@ -2,13 +2,6 @@
 
 declare(strict_types=1);
 
-/*
-    sig(Sophie\Ensure\VarRepresentation::class)
-        ->implements(Sophie\Ensure\VarRepresentationInterface::class);
-    sig(Sophie\Ensure\VarRepresentation::class, '__construct')
-        ->accepts('mixed', 'mixed');
-*/
-
 $varRepresentation = new Sophie\Ensure\VarRepresentation([
     'strawberry',
     'orange',
